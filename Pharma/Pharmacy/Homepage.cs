@@ -1,0 +1,129 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Pharmacy
+{
+    public partial class Homepage : Form
+    {
+        public Homepage()
+        {
+            InitializeComponent();
+          
+        }
+
+        private void Homepage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Inventory_MouseEnter(object sender, EventArgs e)
+        {
+            panel_inventory.BackColor = Color.Teal;
+        }
+
+        private void button_Inventory_MouseLeave(object sender, EventArgs e)
+        {
+            panel_inventory.BackColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void button_Sales_MouseEnter(object sender, EventArgs e)
+        {
+            panel_sales.BackColor = Color.Teal;
+        }
+
+        private void button_Sales_MouseLeave(object sender, EventArgs e)
+        {
+            panel_sales.BackColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void button_Pos_MouseEnter(object sender, EventArgs e)
+        {
+            panel_pos.BackColor = Color.Teal;
+        }
+
+        private void button_Pos_MouseLeave(object sender, EventArgs e)
+        {
+            panel_pos.BackColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void button_Accounts_MouseEnter(object sender, EventArgs e)
+        {
+            panel_accounts.BackColor = Color.Teal;
+        }
+
+        private void button_Accounts_MouseLeave(object sender, EventArgs e)
+        {
+            panel_accounts.BackColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void button_Inventory_Click(object sender, EventArgs e)
+        {
+            Inventory inventory = new Inventory();
+            inventory.Show();
+            this.Hide();
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label_Homepage_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        // MINIMIZING FLICKER - REDUCING THE FLICKER WHEN OPENING FORMS, PANEL, ETC.
+        int originalExStyle = -1;
+        bool enableFormLevelDoubleBuffering = true;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                if (originalExStyle == -1)
+                    originalExStyle = base.CreateParams.ExStyle;
+
+                CreateParams cp = base.CreateParams;
+                if (enableFormLevelDoubleBuffering)
+                    cp.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED
+                else
+                    cp.ExStyle = originalExStyle;
+
+                return cp;
+            }
+        }
+        // END - MINIMIZING FLICKER
+
+
+        private void label_Homepage_close_MouseEnter(object sender, EventArgs e)
+        {
+        }
+
+        private void button_Pos_Click(object sender, EventArgs e)
+        {
+            POS pos = new POS();
+            pos.Show();
+            this.Hide();
+        }
+
+        private void button_Accounts_Click(object sender, EventArgs e)
+        {
+            Accounts accounts = new Accounts();
+            accounts.Show();
+            this.Hide();
+        }
+    }
+}
