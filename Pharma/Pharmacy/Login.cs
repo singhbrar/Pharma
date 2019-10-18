@@ -12,9 +12,13 @@ namespace Pharmacy
 {
     public partial class Login : Form
     {
+        AccountDatabaseAccess Ada;
+        Account user;
         public Login()
         {
             InitializeComponent();
+            Ada = new AccountDatabaseAccess();
+            user = new Account();
         }
 
 
@@ -29,5 +33,23 @@ namespace Pharmacy
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (login() == true)
+            {
+                Homepage home = new Homepage();
+                home.user = this.user;
+                home.Show();
+                this.Hide();
+            }
+
+        }
+        public bool login() 
+        {
+            user=Ada.getByUsernameAndPassword(textBox1.Text, textBox2.Text);
+            if (user.AccountID == -1)
+                return false;
+            return true;
+        }
     }
 }

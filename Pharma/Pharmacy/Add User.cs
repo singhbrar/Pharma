@@ -12,6 +12,7 @@ namespace Pharmacy
 {
     public partial class Add_User : Form
     {
+        public Account user;
         public Add_User()
         {
             InitializeComponent();
@@ -27,6 +28,21 @@ namespace Pharmacy
         private void label_AddUser_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button_Inventory_Click(object sender, EventArgs e)
+        {
+            AccountDatabaseAccess Ada = new AccountDatabaseAccess();
+            Account user = new Account();
+            user.FirstName = firstNametxt.Text;
+            user.LastName = lastNametxt.Text;
+            user.Username = usernametxt.Text;
+            user.Password = passwordtxt.Text;
+            user.UserType = usertypetxt.Text;
+            user.Address = addresstxt.Text;
+            user.EmailAddress = emailtxt.Text;
+            user.Contact = contacttxt.Text;
+            Ada.addAccount(user);
         }
     }
 }

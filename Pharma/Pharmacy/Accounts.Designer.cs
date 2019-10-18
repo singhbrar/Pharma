@@ -36,18 +36,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ItemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BrandName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GenericName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExpiryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateArrived = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PurchasedPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SellingPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BatchNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Storage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_Inventory_Delete = new System.Windows.Forms.Button();
             this.button_Accounts_AddUser = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -137,17 +128,6 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ItemId,
-            this.BrandName,
-            this.GenericName,
-            this.ExpiryDate,
-            this.DateArrived,
-            this.PurchasedPrice,
-            this.SellingPrice,
-            this.BatchNumber,
-            this.Storage,
-            this.Quantity});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.Location = new System.Drawing.Point(222, 159);
             this.dataGridView1.Name = "dataGridView1";
@@ -156,66 +136,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1062, 555);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // ItemId
-            // 
-            this.ItemId.HeaderText = "Item ID";
-            this.ItemId.Name = "ItemId";
-            this.ItemId.ReadOnly = true;
-            // 
-            // BrandName
-            // 
-            this.BrandName.HeaderText = "Brand Name";
-            this.BrandName.Name = "BrandName";
-            this.BrandName.ReadOnly = true;
-            // 
-            // GenericName
-            // 
-            this.GenericName.HeaderText = "Generic Name";
-            this.GenericName.Name = "GenericName";
-            this.GenericName.ReadOnly = true;
-            // 
-            // ExpiryDate
-            // 
-            this.ExpiryDate.HeaderText = "Expiry Date";
-            this.ExpiryDate.Name = "ExpiryDate";
-            this.ExpiryDate.ReadOnly = true;
-            // 
-            // DateArrived
-            // 
-            this.DateArrived.HeaderText = "Date Arrived";
-            this.DateArrived.Name = "DateArrived";
-            this.DateArrived.ReadOnly = true;
-            // 
-            // PurchasedPrice
-            // 
-            this.PurchasedPrice.HeaderText = "Purchased Price";
-            this.PurchasedPrice.Name = "PurchasedPrice";
-            this.PurchasedPrice.ReadOnly = true;
-            // 
-            // SellingPrice
-            // 
-            this.SellingPrice.HeaderText = "Selling Price";
-            this.SellingPrice.Name = "SellingPrice";
-            this.SellingPrice.ReadOnly = true;
-            // 
-            // BatchNumber
-            // 
-            this.BatchNumber.HeaderText = "Batch Number";
-            this.BatchNumber.Name = "BatchNumber";
-            this.BatchNumber.ReadOnly = true;
-            // 
-            // Storage
-            // 
-            this.Storage.HeaderText = "Storage";
-            this.Storage.Name = "Storage";
-            this.Storage.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
             // 
             // button_Inventory_Delete
             // 
@@ -233,6 +153,7 @@
             this.button_Inventory_Delete.Text = "            Delete";
             this.button_Inventory_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Inventory_Delete.UseVisualStyleBackColor = false;
+            this.button_Inventory_Delete.Click += new System.EventHandler(this.button_Inventory_Delete_Click);
             // 
             // button_Accounts_AddUser
             // 
@@ -252,12 +173,31 @@
             this.button_Accounts_AddUser.UseVisualStyleBackColor = false;
             this.button_Accounts_AddUser.Click += new System.EventHandler(this.button_Accounts_AddUser_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Pharmacy.Properties.Resources.inventory_3;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(36, 297);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 63);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "           Update";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Accounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_Inventory_Delete);
             this.Controls.Add(this.button_Accounts_AddUser);
             this.Controls.Add(this.dataGridView1);
@@ -291,17 +231,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_Accounts_AddUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BrandName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GenericName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ExpiryDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateArrived;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PurchasedPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SellingPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BatchNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Storage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.Button button_Inventory_Delete;
+        private System.Windows.Forms.Button button1;
     }
 }
 

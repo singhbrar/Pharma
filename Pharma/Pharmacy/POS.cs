@@ -12,11 +12,17 @@ namespace Pharmacy
 {
     public partial class POS : Form
     {
+        public Account user;
         public POS()
         {
             InitializeComponent();
+            FillData();
         }
-
+        public void FillData() 
+        {
+            ItemDatabaseAccess Ida = new ItemDatabaseAccess();
+            dataGridView1.DataSource = Ida.getAllItem();
+        }
      
 
         private void Homepage_Load(object sender, EventArgs e)
@@ -30,6 +36,7 @@ namespace Pharmacy
         {
             this.Close();
             Homepage homepage = new Homepage();
+            homepage.user = user;
             homepage.Show();
         }
 
