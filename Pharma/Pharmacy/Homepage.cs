@@ -12,6 +12,7 @@ namespace Pharmacy
 {
     public partial class Homepage : Form
     {
+       public Account user;
         public Homepage()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Pharmacy
 
         private void Homepage_Load(object sender, EventArgs e)
         {
-
+            label2.Text = "Welcome, "+user.FirstName;
         }
 
         private void button_Inventory_MouseEnter(object sender, EventArgs e)
@@ -66,7 +67,9 @@ namespace Pharmacy
         private void button_Inventory_Click(object sender, EventArgs e)
         {
             Inventory inventory = new Inventory();
+            inventory.user = user;
             inventory.Show();
+            
             this.Hide();
         }
 
@@ -115,6 +118,7 @@ namespace Pharmacy
         private void button_Pos_Click(object sender, EventArgs e)
         {
             POS pos = new POS();
+            pos.user = user;
             pos.Show();
             this.Hide();
         }
@@ -123,6 +127,7 @@ namespace Pharmacy
         {
             Accounts accounts = new Accounts();
             accounts.Show();
+            accounts.user = user;
             this.Hide();
         }
     }

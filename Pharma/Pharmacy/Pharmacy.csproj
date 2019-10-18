@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="AccountDatabaseAccess.cs" />
     <Compile Include="Add User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +60,13 @@
     <Compile Include="Add Product.Designer.cs">
       <DependentUpon>Add Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientDatabaseAccess.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerDatabaseAccess.cs" />
+    <Compile Include="DatabaseAccess.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemDatabaseAccess.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +79,7 @@
     <Compile Include="Accounts.Designer.cs">
       <DependentUpon>Accounts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs" />
     <Compile Include="POS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +100,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sale.cs" />
+    <Compile Include="SaleDatabaseAccess.cs" />
+    <Compile Include="TransactionDatabaseAccess.cs" />
+    <Compile Include="Transactions.cs" />
+    <Compile Include="Update Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Product.Designer.cs">
+      <DependentUpon>Update Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update User.Designer.cs">
+      <DependentUpon>Update User.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add User.resx">
       <DependentUpon>Add User.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +147,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Update Product.resx">
+      <DependentUpon>Update Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update User.resx">
+      <DependentUpon>Update User.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
