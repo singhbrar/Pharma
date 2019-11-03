@@ -62,12 +62,13 @@
             // 
             this.label_Login_close.AutoSize = true;
             this.label_Login_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Login_close.ForeColor = System.Drawing.Color.Black;
+            this.label_Login_close.ForeColor = System.Drawing.Color.White;
             this.label_Login_close.Location = new System.Drawing.Point(430, 18);
             this.label_Login_close.Name = "label_Login_close";
             this.label_Login_close.Size = new System.Drawing.Size(20, 20);
             this.label_Login_close.TabIndex = 7;
             this.label_Login_close.Text = "X";
+            this.label_Login_close.Click += new System.EventHandler(this.label_Login_close_Click);
             // 
             // panel2
             // 
@@ -98,7 +99,8 @@
             this.textBox1.Location = new System.Drawing.Point(22, 18);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 16);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Administrator";
             // 
             // panel3
             // 
@@ -126,7 +128,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(196, 16);
-            this.textBox2.TabIndex = 0;
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "admin123";
             // 
             // panel5
             // 
@@ -160,7 +163,7 @@
             this.button1.Location = new System.Drawing.Point(280, 385);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 41);
-            this.button1.TabIndex = 24;
+            this.button1.TabIndex = 1;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);

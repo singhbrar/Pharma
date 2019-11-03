@@ -12,7 +12,7 @@ namespace Pharmacy
     {
 
         SqlConnection conn;
-        String connectionString = @"Data Source=PEN\Stephen;Initial Catalog=Inventory;Trusted_Connection=True;Integrated Security = true";
+        String connectionString = @"Data Source=.\sqlexpress;Initial Catalog=Inventory;Trusted_Connection=True;Integrated Security = true";
         public SaleDatabaseAccess()
         {
             conn = new SqlConnection(connectionString);

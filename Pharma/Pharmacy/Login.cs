@@ -25,7 +25,7 @@ namespace Pharmacy
 
         private void Homepage_Load(object sender, EventArgs e)
         {
-
+            textBox1.Focus();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -50,6 +50,11 @@ namespace Pharmacy
             if (user.AccountID == -1)
                 return false;
             return true;
+        }
+
+        private void label_Login_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
