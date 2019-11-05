@@ -21,7 +21,7 @@ namespace Pharmacy
 
         private void Homepage_Load(object sender, EventArgs e)
         {
-            label2.Text = "Welcome, "+user.FirstName;
+   //         label2.Text = "Welcome, "+user.FirstName;
         }
 
         private void button_Inventory_MouseEnter(object sender, EventArgs e)
@@ -117,9 +117,8 @@ namespace Pharmacy
 
         private void button_Pos_Click(object sender, EventArgs e)
         {
-            POS pos = new POS();
-            pos.user = user;
-            pos.Show();
+            PharmaPOS pharmapos = new PharmaPOS();
+            pharmapos.Show();
             this.Hide();
         }
 
